@@ -1,0 +1,37 @@
+{
+  "name": "@saudi-mcp/wathq",
+  "version": "0.1.0",
+  "description": "MCP server for the Wathq commercial registration API (Saudi Arabia)",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "saudi-mcp-wathq": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "dev": "node --loader tsx src/index.ts"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "wathq",
+    "saudi",
+    "commercial-registration",
+    "ksa"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4",
+    "@saudi-mcp/shared": "workspace:*",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  }
+}

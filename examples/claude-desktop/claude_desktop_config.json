@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "wathq": {
+      "command": "npx",
+      "args": ["-y", "@saudi-mcp/wathq"],
+      "env": {
+        "WATHQ_API_KEY": "your_key_here"
+      }
+    }
+  }
+}
