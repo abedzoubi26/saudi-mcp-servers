@@ -1,8 +1,15 @@
 {
   "name": "@saudi-mcp/wathq",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "MCP server for the Wathq commercial registration API (Saudi Arabia)",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abedzoubi26/saudi-mcp-servers.git",
+    "directory": "packages/wathq"
+  },
+  "homepage": "https://github.com/abedzoubi26/saudi-mcp-servers#readme",
+  "bugs": "https://github.com/abedzoubi26/saudi-mcp-servers/issues",
   "type": "module",
   "bin": {
     "saudi-mcp-wathq": "./dist/index.js"

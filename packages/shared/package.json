@@ -3,6 +3,13 @@
   "version": "0.1.1",
   "description": "Shared utilities for Saudi MCP servers: HTTP client, error types, Arabic text helpers",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abedzoubi26/saudi-mcp-servers.git",
+    "directory": "packages/shared"
+  },
+  "homepage": "https://github.com/abedzoubi26/saudi-mcp-servers#readme",
+  "bugs": "https://github.com/abedzoubi26/saudi-mcp-servers/issues",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
