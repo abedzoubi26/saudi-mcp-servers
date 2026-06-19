@@ -2,6 +2,7 @@
   "name": "@saudi-mcp/shared",
   "version": "0.1.1",
   "description": "Shared utilities for Saudi MCP servers: HTTP client, error types, Arabic text helpers",
+  "author": "Abdelrahman Alzubi",
   "license": "MIT",
   "repository": {
     "type": "git",

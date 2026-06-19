@@ -2,6 +2,7 @@
   "name": "@saudi-mcp/wathq",
   "version": "0.1.1",
   "description": "MCP server for the Wathq commercial registration API (Saudi Arabia)",
+  "author": "Abdelrahman Alzubi",
   "license": "MIT",
   "repository": {
     "type": "git",
