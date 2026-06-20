@@ -95,8 +95,9 @@ export class ZatcaClient {
   // ── Helpers ───────────────────────────────────────────────────────────────
 
   private csidAuthHeaders(): Record<string, string> {
+    // ZATCA Basic auth = base64(binarySecurityToken:secret)
     const token = Buffer.from(
-      `${this.config.cert}:${this.config.privateKey}`,
+      `${this.config.cert}:${this.config.secret}`,
     ).toString("base64");
     return { Authorization: `Basic ${token}` };
   }
@@ -115,6 +116,7 @@ export class ZatcaClient {
         headers: {
           "Content-Type": "application/json",
           "Accept-Version": ACCEPT_VERSION,
+          "Accept-Language": "en",
           ...extraHeaders,
         },
         body: JSON.stringify(body),
@@ -137,7 +139,7 @@ export class ZatcaClient {
 
     if (!res.ok) {
       throw new ApiError({
-        kind: res.status === 401 ? "auth" : res.status === 429 ? "rate_limit" : "upstream",
+        kind: res.status === 401 ? "auth" : res.status === 429 ? "rate_limit" : "server",
         service: "zatca",
         upstreamCode: String(res.status),
         message: `ZATCA returned ${res.status}: ${text.slice(0, 200)}`,
